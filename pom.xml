@@ -38,23 +38,34 @@
       <system>github</system>
       <url>https://github.com/infinispan/Infinispan-book/issues</url>
    </issueManagement>
-   <properties>
-      <!-- Versions for dependencies -->
-      <version.infinispan>5.3.0.Final</version.infinispan>
-   </properties>
+    <properties>
+        <!-- Versions for dependencies -->
+        <version.infinispan>5.3.0.Final</version.infinispan>
+    </properties>
 
-   <dependencies>
-      <dependency>
-         <groupId>org.infinispan</groupId>
-         <artifactId>infinispan-core</artifactId>
-         <version>${version.infinispan}</version>
-      </dependency>
-	<dependency>
-		<groupId>org.infinispan</groupId>
-		<artifactId>infinispan-client-hotrod</artifactId>
-		<version>${version.infinispan}</version>
-	</dependency>
-   </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-core</artifactId>
+            <version>${version.infinispan}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jgroups</groupId>
+                    <artifactId>jgroups</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.jgroups</groupId>
+            <artifactId>jgroups</artifactId>
+            <version>3.5.1.FINAL</version>
+        </dependency>
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-client-hotrod</artifactId>
+            <version>${version.infinispan}</version>
+        </dependency>
+    </dependencies>
 
    <build>
       <plugins>

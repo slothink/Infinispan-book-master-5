@@ -7,7 +7,7 @@
                 nodeName="Infinispan-Node1"
                 clusterName="infinispan-cluster" >
             <properties>
-                <property name="configurationFile" value="sample-jgroups-tcp-3.3.1.xml" />
+                <property name="configurationFile" value="sample-jgroups-tcp-3.5.1.xml" />
             </properties>
         </transport>
 
